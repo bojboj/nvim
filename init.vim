@@ -6,9 +6,12 @@ Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-dap'
+Plug 'xdebug/vscode-php-debug', { 'dir': '~/.config/nvim/tooling/vscode-php-debug', 'do': 'npm install && npm run build' }
 
 call plug#end()
 
@@ -38,5 +41,15 @@ nnoremap * *``
 nnoremap # #``
 
 lua << EOF
+
 require'lspconfig'.intelephense.setup{}
+
+require('dap.ext.vscode').load_launchjs()
+local dap = require('dap')
+dap.adapters.php = {
+  type = 'executable',
+  command = 'node',
+	args = {os.getenv("HOME")..'/.config/nvim/tooling/vscode-php-debug/out/phpDebug.js'}
+}
+
 EOF

@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
 Plug 'xdebug/vscode-php-debug', { 'dir': '~/.config/nvim/tooling/vscode-php-debug', 'do': 'npm install && npm run build' }
 
 call plug#end()

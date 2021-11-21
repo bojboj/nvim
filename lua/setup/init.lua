@@ -1,6 +1,7 @@
 require('setup.neovim')
+require('setup.plugged.gitsigns')
 require('setup.plugged.indent-blankline')
+require('setup.plugged.lualine')
 require('setup.plugged.nvim-dap')
 require('setup.plugged.nvim-lspconfig')
 require('setup.plugged.nvim-tree')
-require('setup.plugged.vgit')

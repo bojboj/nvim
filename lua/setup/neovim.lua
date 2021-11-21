@@ -1,10 +1,10 @@
 local home = os.getenv('HOME')
 
-vim.opt.rtp:append(home..'/.fzf') -- Add fzf path.
 vim.opt.hidden = true             -- Enable buffer to be hidden.
 vim.opt.laststatus = 2            -- Always show status bar.
 vim.opt.mouse = 'a'               -- Mouse support.
 vim.opt.relativenumber = true     -- Enable number line.
+vim.opt.rtp:append(home..'/.fzf') -- Add fzf path.
 
 vim.g.seoul256_background = 239
 vim.cmd('colo seoul256')

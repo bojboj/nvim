@@ -1,1 +1,1 @@
-# Neovim init.vim
+# Neovim init.lua

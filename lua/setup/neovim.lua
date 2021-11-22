@@ -11,10 +11,11 @@ vim.opt.rtp:append(home..'/.fzf') -- Add fzf path.
 vim.cmd('colo seoul256')
 
 local keymap = vim.api.nvim_set_keymap
+local opts = {noremap = true, silent = true}
 
 -- Clear search highlights.
-keymap('n', '<Leader><space>', ':noh<CR>', {noremap = true, silent = true})
+keymap('n', '<Leader><space>', ':noh<CR>', opts)
 
 -- Search word in cursor without moving.
-keymap('n', '*', '*``', {noremap = true, silent = true})
-keymap('n', '#', '#``', {noremap = true, silent = true})
+keymap('n', '*', '*``', opts)
+keymap('n', '#', '#``', opts)

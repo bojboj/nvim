@@ -3,19 +3,22 @@ local plug = vim.fn['plug#']
 
 vim.call('plug#begin', home..'/.config/nvim/plugged')
 
--- vim plugins
-plug('junegunn/fzf', {dir = home..'/.fzf', ['do'] = './install --all'})
-plug('junegunn/fzf.vim')
+-- coloerscheme
 plug('junegunn/seoul256.vim')
-plug('mhinz/vim-grepper')
-plug('editorconfig/editorconfig-vim')
 
--- neovim plugins
-plug('nvim-lua/plenary.nvim')
-plug('lewis6991/gitsigns.nvim')
+-- ui
 plug('kyazdani42/nvim-tree.lua')
 plug('lukas-reineke/indent-blankline.nvim')
 plug('nvim-lualine/lualine.nvim')
+plug('lewis6991/gitsigns.nvim')
+
+-- editorconfig
+plug('editorconfig/editorconfig-vim')
+
+-- telescope
+plug('nvim-lua/plenary.nvim')
+plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+plug('nvim-telescope/telescope.nvim')
 
 --  lsp
 plug('neovim/nvim-lspconfig')

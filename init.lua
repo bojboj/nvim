@@ -3,7 +3,7 @@ local plug = vim.fn['plug#']
 
 vim.call('plug#begin', home..'/.config/nvim/plugged')
 
--- coloerscheme
+-- colorscheme
 plug('junegunn/seoul256.vim')
 
 -- ui

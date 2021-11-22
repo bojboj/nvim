@@ -10,9 +10,9 @@ dap.adapters.php = {
 require('dap.ext.vscode').load_launchjs()
 
 dap.defaults.fallback.terminal_win_cmd = '80vsplit new'
-vim.fn.sign_define('DapBreakpoint', {text='🟥', texthl='', linehl='', numhl=''})
-vim.fn.sign_define('DapBreakpointRejected', {text='🟦', texthl='', linehl='', numhl=''})
-vim.fn.sign_define('DapStopped', {text='⭐️', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpoint', {text='B', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpointRejected', {text='R', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapStopped', {text='S', texthl='', linehl='', numhl=''})
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}

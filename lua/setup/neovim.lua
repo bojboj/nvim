@@ -1,9 +1,10 @@
-vim.opt.hidden = true             -- Enable buffer to be hidden.
-vim.opt.laststatus = 2            -- Always show status bar.
-vim.opt.mouse = 'a'               -- Mouse support.
-vim.opt.number = true             -- Enable number line.
-vim.opt.relativenumber = true     -- Enable relative number line.
-vim.opt.termguicolors = true      -- Enable rgb colors.
+vim.opt.ignorecase = true     -- Ignore case when searching.
+vim.opt.smartcase = true      -- Case sensitive if searching with uppercase.
+vim.opt.hidden = true         -- Enable buffer to be hidden.
+vim.opt.mouse = 'a'           -- Mouse support.
+vim.opt.number = true         -- Enable number line.
+vim.opt.relativenumber = true -- Enable relative number line.
+vim.opt.termguicolors = true  -- Enable rgb colors.
 
 vim.cmd('colo seoul256')
 

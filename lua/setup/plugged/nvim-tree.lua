@@ -1,8 +1,11 @@
 require('nvim-tree.view').View.winopts.relativenumber = true
 require('nvim-tree').setup {
-	filters = {
-		custom = {'.git'},
-	},
+  filters = {
+    custom = {'.git'},
+  },
+  view = {
+    width = 40,
+  },
 }
 
 local keymap = vim.api.nvim_set_keymap

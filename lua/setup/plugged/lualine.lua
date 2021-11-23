@@ -1,5 +1,7 @@
 require('lualine').setup {
   options = {
-    theme = 'seoul256'
+    theme = 'seoul256',
+    component_separators = {left = '', right = ''},
+    section_separators = {left = '', right = ''},
   }
 }

@@ -7,6 +7,7 @@ vim.call('plug#begin', home..'/.config/nvim/plugged')
 plug('junegunn/seoul256.vim')
 
 -- ui
+plug('kyazdani42/nvim-web-devicons')
 plug('kyazdani42/nvim-tree.lua')
 plug('lukas-reineke/indent-blankline.nvim')
 plug('nvim-lualine/lualine.nvim')

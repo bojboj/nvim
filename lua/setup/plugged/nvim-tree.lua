@@ -13,6 +13,6 @@ require('nvim-tree').setup {
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
-keymap('n', '<Leader>ntff', ':NvimTreeFindFile<CR>', opts)
-keymap('n', '<Leader>ntr', ':NvimTreeRefresh<CR>', opts)
-keymap('n', '<Leader>ntt', ':NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>', opts)
+keymap('n', '<leader>tr', ':NvimTreeRefresh<CR>', opts)
+keymap('n', '<leader>tt', ':NvimTreeToggle<CR>', opts)

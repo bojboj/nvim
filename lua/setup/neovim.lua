@@ -12,7 +12,7 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 -- Clear search highlights.
-keymap('n', '<Leader><space>', ':noh<CR>', opts)
+keymap('n', '<leader><space>', ':noh<CR>', opts)
 
 -- Search word in cursor without moving.
 keymap('n', '*', '*``', opts)

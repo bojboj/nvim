@@ -44,7 +44,6 @@ cmp.setup({
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   virtual_text = false,
 })
-local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -73,17 +72,43 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader><space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.settings({
+  install_root_dir = os.getenv('HOME')..'/.config/nvim/tooling/lsp_servers',
+})
+
+local servers = {
+	'cssls',
+  'eslint',
+  'html',
+  'intelephense',
+  'jsonls',
+  'sumneko_lua',
+  'yamlls',
+}
+
+for _, name in pairs(servers) do
+	local ok, server = lsp_installer.get_server(name)
+	if ok then
+		if not server:is_installed() then
+			print("Installing " .. name)
+			server:install()
+		end
+	end
+end
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = {'intelephense'}
-
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
+lsp_installer.on_server_ready(function(server)
+    local opts = {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150,
+      }
     }
-  }
-end
+
+    server:setup(opts)
+end)

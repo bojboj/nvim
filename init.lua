@@ -31,7 +31,7 @@ plug('hrsh7th/cmp-path')
 
 -- nvim-dap
 plug('mfussenegger/nvim-dap')
-plug('xdebug/vscode-php-debug', {tag = 'v1.22.0', dir = home..'/.config/nvim/tooling/vscode-php-debug', ['do'] = 'npm install && npm run build'})
+plug('xdebug/vscode-php-debug', {tag = 'v1.22.0', dir = home..'/.config/nvim/tooling/dab_adapters/vscode-php-debug', ['do'] = 'npm install && npm run build'})
 
 vim.call('plug#end')
 

@@ -21,6 +21,10 @@ plug('nvim-lua/plenary.nvim')
 plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 plug('nvim-telescope/telescope.nvim')
 
+-- session
+plug('rmagatti/auto-session')
+plug('rmagatti/session-lens')
+
 --  lsp
 plug('neovim/nvim-lspconfig')
 plug('williamboman/nvim-lsp-installer')

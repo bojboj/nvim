@@ -1,4 +1,5 @@
 require('setup.neovim')
+require('setup.plugged.auto-session')
 require('setup.plugged.gitsigns')
 require('setup.plugged.indent-blankline')
 require('setup.plugged.lualine')

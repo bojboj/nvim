@@ -1,12 +1,12 @@
 vim.g.nvim_tree_root_folder_modifier = ':p:.'
 
-require('nvim-tree.view').View.winopts.relativenumber = true
 require('nvim-tree').setup {
   filters = {
     custom = {'.git'},
   },
   view = {
     width = 40,
+    relativenumber = true
   },
   git = {
     ignore = false

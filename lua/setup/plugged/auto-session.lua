@@ -1,7 +1,6 @@
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 local nvim_tree = require('nvim-tree')
-local nvim_tree_lib = require('nvim-tree.lib')
 
 local function close_nvim_tree()
   nvim_tree.close()
@@ -9,7 +8,6 @@ end
 
 local function refresh_nvim_tree()
   nvim_tree.change_dir(vim.fn.getcwd())
-  nvim_tree_lib.refresh_tree()
 end
 
 require('auto-session').setup {

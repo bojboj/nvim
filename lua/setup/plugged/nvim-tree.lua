@@ -8,6 +8,9 @@ require('nvim-tree').setup {
   view = {
     width = 40,
   },
+  git = {
+    ignore = false
+  },
 }
 
 local keymap = vim.api.nvim_set_keymap

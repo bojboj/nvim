@@ -1,3 +1,13 @@
+vim.api.nvim_exec(
+[[
+let data_dir = stdpath('data') . '/site'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+]],
+false)
+
 local home = os.getenv('HOME')
 local plug = vim.fn['plug#']
 
@@ -8,10 +18,10 @@ plug('junegunn/seoul256.vim')
 
 -- ui
 plug('kyazdani42/nvim-web-devicons')
-plug('kyazdani42/nvim-tree.lua', {tag = '1.6.7'})
-plug('lukas-reineke/indent-blankline.nvim', {tag = 'v2.10.6'})
+plug('kyazdani42/nvim-tree.lua')
+plug('lukas-reineke/indent-blankline.nvim')
 plug('nvim-lualine/lualine.nvim')
-plug('lewis6991/gitsigns.nvim', {tag = 'v0.3'})
+plug('lewis6991/gitsigns.nvim')
 
 -- editorconfig
 plug('editorconfig/editorconfig-vim')

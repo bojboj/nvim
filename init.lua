@@ -28,8 +28,10 @@ plug('editorconfig/editorconfig-vim')
 
 -- telescope
 plug('nvim-lua/plenary.nvim')
-plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 plug('nvim-telescope/telescope.nvim')
+
+-- treesitter
+plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
 -- session
 plug('rmagatti/auto-session')

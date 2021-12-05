@@ -20,6 +20,8 @@ local opts = {noremap = true}
 
 keymap('n', '<leader>F', ':Telescope ', opts)
 keymap('n', '<leader>fd', ':Telescope buffers<cr>', opts)
+keymap('n', '<leader>fD', ':Telescope file_browser<cr>', opts)
+keymap('n', '<leader>fF', ':Telescope find_files<cr>', opts)
 keymap('n', '<leader>ff', ':Telescope git_files<cr>', opts)
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>', opts)
 keymap('n', '<leader>fr', ':Telescope lsp_references<cr>', opts)

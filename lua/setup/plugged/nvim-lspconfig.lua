@@ -79,7 +79,7 @@ lsp_installer.settings({
 })
 
 local servers = {
-	'cssls',
+  'cssls',
   'eslint',
   'html',
   'intelephense',

@@ -8,6 +8,7 @@ require('nvim-treesitter.configs').setup {
     'lua',
     'php',
     'vim',
+    'yaml',
   },
   sync_install = false,
   highlight = {

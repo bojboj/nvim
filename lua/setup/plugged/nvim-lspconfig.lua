@@ -86,6 +86,7 @@ local servers = {
   'jsonls',
   'sumneko_lua',
   'yamlls',
+  'ltex',
 }
 
 for _, name in pairs(servers) do

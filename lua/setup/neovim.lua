@@ -6,6 +6,7 @@ vim.opt.number = true         -- Enable number line.
 vim.opt.relativenumber = true -- Enable relative number line.
 vim.opt.termguicolors = true  -- Enable rgb colors.
 vim.opt.swapfile = false      -- Disable swapfile.
+vim.opt.autoread = true       -- Update file that was modified outside.
 
 vim.cmd('colo seoul256')
 

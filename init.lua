@@ -23,7 +23,6 @@ plug('kyazdani42/nvim-web-devicons')
 plug('kyazdani42/nvim-tree.lua')
 plug('nvim-lualine/lualine.nvim')
 plug('kevinhwang91/nvim-bqf')
-plug('akinsho/toggleterm.nvim')
 
 -- editorconfig
 plug('editorconfig/editorconfig-vim')

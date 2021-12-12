@@ -1,21 +1,20 @@
-vim.g.nvim_tree_root_folder_modifier = ':p:.'
+vim.g.nvim_tree_root_folder_modifier = ":p:."
+vim.g.nvim_tree_quit_on_open = 1
 
-require('nvim-tree').setup {
+require("nvim-tree").setup {
   filters = {
-    custom = {'.git'},
+    custom = {".git"}
   },
   view = {
-    width = 40,
     relativenumber = true
   },
   git = {
     ignore = false
-  },
+  }
 }
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
-keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>', opts)
-keymap('n', '<leader>tr', ':NvimTreeRefresh<CR>', opts)
-keymap('n', '<leader>tt', ':NvimTreeToggle<CR>', opts)
+keymap("n", "<leader>tr", ":NvimTreeRefresh<cr>", opts)
+keymap("n", "<leader>tt", ":NvimTreeFindFileToggle<cr>", opts)

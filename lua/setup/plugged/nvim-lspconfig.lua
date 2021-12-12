@@ -89,13 +89,13 @@ local servers = {
 }
 
 for _, name in pairs(servers) do
-	local ok, server = lsp_installer.get_server(name)
-	if ok then
-		if not server:is_installed() then
-			print("Installing " .. name)
-			server:install()
-		end
-	end
+  local ok, server = lsp_installer.get_server(name)
+    if ok then
+      if not server:is_installed() then
+        print("Installing " .. name)
+        server:install()
+    end
+  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

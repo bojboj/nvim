@@ -34,10 +34,6 @@ plug("nvim-telescope/telescope.nvim")
 -- treesitter
 plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 
--- session
-plug("rmagatti/auto-session")
-plug("rmagatti/session-lens")
-
 --  lsp
 plug("neovim/nvim-lspconfig")
 plug("williamboman/nvim-lsp-installer")
@@ -54,7 +50,6 @@ plug("xdebug/vscode-php-debug", {dir = home .. "/.config/nvim/tooling/dab_adapte
 vim.call("plug#end")
 
 require("setup.neovim")
-require("setup.plugged.auto-session")
 require("setup.plugged.gitsigns")
 require("setup.plugged.indent-blankline")
 require("setup.plugged.lualine")

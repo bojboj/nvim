@@ -3,7 +3,6 @@
 " :source this file in vim to restore the snapshot
 " or execute: vim -S snapshot.vim
 
-silent! let g:plugs['auto-session'].commit = '08e766c1467d3fa3b53ca1dafdfa9815ea830b3c'
 silent! let g:plugs['cmp-buffer'].commit = 'a706dc69c49110038fe570e5c9c33d6d4f67015b'
 silent! let g:plugs['cmp-nvim-lsp'].commit = '134117299ff9e34adde30a735cd8ca9cf8f3db81'
 silent! let g:plugs['cmp-path'].commit = 'd83839ae510d18530c6d36b662a9e806d4dceb73'
@@ -21,7 +20,6 @@ silent! let g:plugs['nvim-treesitter'].commit = 'd6a0a26b8563409d4660def7320a4f4
 silent! let g:plugs['nvim-web-devicons'].commit = '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'
 silent! let g:plugs['plenary.nvim'].commit = '5d4a65a84d2eb2ee035c667d01ef8e7cafb8a549'
 silent! let g:plugs['seoul256.vim'].commit = '57e545942fff2f796f26715bc0e937243dfa30c0'
-silent! let g:plugs['session-lens'].commit = '4c1754bf5c2372d0a6265d40fb8f713bc27c8018'
 silent! let g:plugs['telescope.nvim'].commit = '5f37fbfa837dfee7ecd30f388b271f4a71c0a9e0'
 silent! let g:plugs['vscode-php-debug'].commit = 'f5c953405552845f02afb06fcf43da351b519260'
 

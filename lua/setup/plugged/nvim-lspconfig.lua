@@ -37,7 +37,7 @@ cmp.setup({
   sources = cmp.config.sources({
     {name = "nvim_lsp"},
     {name = "buffer"},
-    {name = "path"},
+    {name = "path"}
   })
 })
 
@@ -85,7 +85,7 @@ local servers = {
   "intelephense",
   "jsonls",
   "sumneko_lua",
-  "yamlls",
+  "yamlls"
 }
 
 for _, name in pairs(servers) do

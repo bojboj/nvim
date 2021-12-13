@@ -5,6 +5,8 @@ vim.opt.mouse = "a"           -- Mouse support.
 vim.opt.number = true         -- Enable number line.
 vim.opt.relativenumber = true -- Enable relative number line.
 vim.opt.termguicolors = true  -- Enable rgb colors.
+vim.opt.cursorline = true     -- Show cursor line.
+vim.opt.cursorcolumn = true   -- Show cursor column line.
 vim.opt.swapfile = false      -- Disable swapfile.
 vim.opt.autoread = true       -- Update file that was modified outside.
 

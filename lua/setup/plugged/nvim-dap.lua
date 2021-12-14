@@ -7,12 +7,23 @@ dap.adapters.php = {
 }
 
 require("dap.ext.vscode").load_launchjs()
-require("dapui").setup {}
+require("dapui").setup {
+  sidebar = {
+    elements = {
+      {id = "breakpoints", size = 0.20},
+      {id = "stacks", size = 0.30},
+      {id = "scopes", size = 0.50}
+    }
+  },
+  tray = {
+    elements = {}
+  }
+}
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true}
 
-keymap("n", "<F1>", ":lua require('dapui').toggle()<cr>", opts)
+keymap("n", "<F1>", ":lua require('nvim-tree').close() require('dapui').toggle()<cr>", opts)
 keymap("n", "<F2>", ":lua require('dap').terminate()<cr>", opts)
 keymap("n", "<F3>", ":lua require('dap').continue()<cr>", opts)
 keymap("n", "<F4>", ":lua require('dap').toggle_breakpoint()<cr>", opts)

@@ -17,4 +17,4 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 keymap("n", "<leader>tr", ":NvimTreeRefresh<cr>", opts)
-keymap("n", "<leader>tt", ":NvimTreeFindFileToggle<cr>", opts)
+keymap("n", "<leader>tt", ":lua require('dapui').close() require('nvim-tree').toggle(true)<cr>", opts)

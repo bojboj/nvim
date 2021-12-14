@@ -17,12 +17,13 @@ vim.call("plug#begin", home .. "/.config/nvim/plugged")
 plug("junegunn/seoul256.vim")
 
 -- ui
-plug("lewis6991/gitsigns.nvim")
-plug("lukas-reineke/indent-blankline.nvim")
 plug("kyazdani42/nvim-web-devicons")
 plug("kyazdani42/nvim-tree.lua")
 plug("nvim-lualine/lualine.nvim")
+plug("lukas-reineke/indent-blankline.nvim")
+plug("RRethy/vim-illuminate")
 plug("kevinhwang91/nvim-bqf")
+plug("lewis6991/gitsigns.nvim")
 
 -- editorconfig
 plug("editorconfig/editorconfig-vim")

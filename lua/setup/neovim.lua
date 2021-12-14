@@ -11,6 +11,7 @@ vim.opt.swapfile = false      -- Disable swapfile.
 vim.opt.autoread = true       -- Update file that was modified outside.
 
 vim.cmd("colo seoul256")
+vim.cmd("autocmd VimEnter * hi illuminatedWord guibg=#6b6b6b")
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}

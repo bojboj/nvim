@@ -21,7 +21,7 @@ require("dapui").setup {
 }
 
 local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true}
+local opts = {noremap = true, silent = true}
 
 keymap("n", "<F1>", ":lua require('nvim-tree').close() require('dapui').toggle()<cr>", opts)
 keymap("n", "<F2>", ":lua require('dap').terminate()<cr>", opts)

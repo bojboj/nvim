@@ -18,7 +18,7 @@ require("telescope").setup{
 }
 
 local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true}
+local opts = {noremap = true, silent = true}
 
 keymap("n", "<leader>F", ":Telescope<cr>", opts)
 keymap("n", "<leader>fc", ":Telescope git_status<cr>", opts)

@@ -16,7 +16,7 @@ nvim_tree.setup {
   }
 }
 
-function nvim_tree_open()
+function nvim_tree_open_find()
   dapui.close()
 
   if not view.win_open() then
@@ -35,7 +35,7 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 keymap("n", "<leader>T", ":NvimTreeClose<cr>", opts)
-keymap("n", "<leader>t", ":lua nvim_tree_open()<cr>", opts)
+keymap("n", "<leader>t", ":lua nvim_tree_open_find()<cr>", opts)
 keymap("n", "<leader>rt", ":lua nvim_tree_add_width(10)<cr>", opts)
 keymap("n", "<leader>re", ":lua nvim_tree_add_width(-10)<cr>", opts)
 keymap("n", "<leader>rr", ":NvimTreeRefresh<cr>", opts)

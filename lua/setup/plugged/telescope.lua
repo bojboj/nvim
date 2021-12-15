@@ -1,4 +1,5 @@
 local actions = require("telescope.actions")
+local utils = require("telescope.utils")
 
 require("telescope").setup{
   defaults = {
@@ -14,7 +15,10 @@ require("telescope").setup{
         },
       }
     },
-  },
+    file_browser = {
+      cwd = utils.buffer_dir()
+    }
+  }
 }
 
 local keymap = vim.api.nvim_set_keymap
@@ -25,3 +29,4 @@ keymap("n", "<leader>fc", ":Telescope git_status<cr>", opts)
 keymap("n", "<leader>fd", ":Telescope buffers<cr>", opts)
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fv", ":Telescope file_browser<cr>", opts)

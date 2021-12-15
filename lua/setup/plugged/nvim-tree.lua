@@ -3,6 +3,7 @@ local view = require("nvim-tree.view")
 local dapui = require("dapui")
 
 vim.g.nvim_tree_root_folder_modifier = ":p:."
+vim.g.nvim_tree_indent_markers = 1
 
 nvim_tree.setup {
   filters = {

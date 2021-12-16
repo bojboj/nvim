@@ -1,5 +1,4 @@
 local actions = require("telescope.actions")
-local utils = require("telescope.utils")
 
 require("telescope").setup{
   defaults = {
@@ -16,7 +15,7 @@ require("telescope").setup{
       }
     },
     file_browser = {
-      cwd = utils.buffer_dir()
+      cwd = "%:p:h"
     }
   }
 }

@@ -19,3 +19,6 @@ local opts = {noremap = true, silent = true}
 -- Search word in cursor without moving.
 keymap("n", "*", "*``", opts)
 keymap("n", "#", "#``", opts)
+
+-- Terminal mapping
+keymap("t", "<leader><esc>", "<C-\\><C-n>", opts)

@@ -28,6 +28,9 @@ plug("lewis6991/gitsigns.nvim")
 -- editorconfig
 plug("editorconfig/editorconfig-vim")
 
+-- notes
+plug("vimwiki/vimwiki")
+
 -- telescope
 plug("nvim-lua/plenary.nvim")
 plug("nvim-telescope/telescope.nvim")
@@ -35,7 +38,7 @@ plug("nvim-telescope/telescope.nvim")
 -- treesitter
 plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 
---  lsp
+-- lsp
 plug("neovim/nvim-lspconfig")
 plug("williamboman/nvim-lsp-installer")
 plug("hrsh7th/nvim-cmp")
@@ -50,6 +53,7 @@ plug("xdebug/vscode-php-debug", {dir = home .. "/.config/nvim/tooling/dab_adapte
 
 vim.call("plug#end")
 
+require("setup.colorscheme")
 require("setup.neovim")
 require("setup.plugged.gitsigns")
 require("setup.plugged.indent-blankline")

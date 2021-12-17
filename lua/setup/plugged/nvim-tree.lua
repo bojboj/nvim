@@ -34,6 +34,10 @@ end
 
 function Nvim_tree_add_width(num)
   nvim_tree.resize(view.View.width + num)
+
+  -- Temporary fix nvim_tree.resize does not automatically resize window.
+  nvim_tree.close()
+  nvim_tree.open()
 end
 
 local keymap = vim.api.nvim_set_keymap

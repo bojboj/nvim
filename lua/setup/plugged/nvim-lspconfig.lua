@@ -79,13 +79,16 @@ lsp_installer.settings({
 })
 
 local servers = {
-  "cssls",
-  "eslint",
-  "html",
-  "intelephense",
-  "jsonls",
-  "sumneko_lua",
-  "yamlls"
+  "bashls",      -- bash
+  "ccls",        -- c
+  "csharpls",    -- c#
+  "cssls",       -- css
+  "html",        -- html
+  "tsserver",    -- javascript
+  "jsonls",      -- json
+  "sumneko_lua", -- lua
+  "phpactor",    -- php
+  "yamlls"       -- yaml
 }
 
 for _, name in pairs(servers) do

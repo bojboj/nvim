@@ -80,8 +80,8 @@ lsp_installer.settings({
 
 local servers = {
   "bashls",      -- bash
-  "ccls",        -- c
-  "csharpls",    -- c#
+  "clangd",      -- c
+  "omnisharp",   -- c#
   "cssls",       -- css
   "html",        -- html
   "tsserver",    -- javascript

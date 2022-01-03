@@ -1,2 +1,4 @@
-vim.cmd("colo seoul256")
-vim.cmd("autocmd VimEnter * hi illuminatedWord guibg=#6b6b6b")
+require("github-theme").setup {
+  dark_float = true,
+  sidebars = {"qf", "terminal"}
+}

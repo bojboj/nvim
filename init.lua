@@ -14,7 +14,7 @@ local plug = vim.fn["plug#"]
 vim.call("plug#begin", home .. "/.config/nvim/plugged")
 
 -- colorscheme
-plug("projekt0n/github-nvim-theme")
+plug("EdenEast/nightfox.nvim")
 
 -- ui
 plug("kyazdani42/nvim-web-devicons")

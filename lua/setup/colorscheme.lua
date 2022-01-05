@@ -6,14 +6,14 @@ nightfox.setup(
     styles = {
       comments = "italic",
       functions = "bold",
-      keywords = "italic",
+      keywords = "bold,italic",
       strings = "NONE",
-      variables = "bold"
+      variables = "NONE"
     },
     inverse = {
       match_paren = true,
-      visual = true,
-      search = true
+      visual = false,
+      search = false
     },
     colors = {},
     hlgroups = {},

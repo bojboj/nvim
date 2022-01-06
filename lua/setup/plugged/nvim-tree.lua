@@ -10,6 +10,7 @@ nvim_tree.setup {
     custom = {".git"}
   },
   view = {
+    width = 40,
     relativenumber = true
   },
   git = {

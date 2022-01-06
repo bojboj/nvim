@@ -22,7 +22,6 @@ silent! let g:plugs['nvim-treesitter'].commit = 'be741e256895c5ead5254b85366a136
 silent! let g:plugs['nvim-web-devicons'].commit = '344331467509802e1af200f08ec3da278be5cbba'
 silent! let g:plugs['plenary.nvim'].commit = 'd90956ba6b7cce0b30350cf365e57c915004a31e'
 silent! let g:plugs['telescope.nvim'].commit = '5f37fbfa837dfee7ecd30f388b271f4a71c0a9e0'
-silent! let g:plugs['vim-illuminate'].commit = '2beae0581caa66cf8c09fad7c7c557f92d49d2bd'
 silent! let g:plugs['vimwiki'].commit = '619f04f89861c58e5a6415a4f83847752928252d'
 silent! let g:plugs['vscode-php-debug'].commit = 'f5c953405552845f02afb06fcf43da351b519260'
 

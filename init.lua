@@ -21,7 +21,6 @@ plug("kyazdani42/nvim-web-devicons")
 plug("kyazdani42/nvim-tree.lua")
 plug("nvim-lualine/lualine.nvim")
 plug("lukas-reineke/indent-blankline.nvim")
-plug("RRethy/vim-illuminate")
 plug("kevinhwang91/nvim-bqf")
 plug("lewis6991/gitsigns.nvim")
 

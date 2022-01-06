@@ -6,7 +6,7 @@ nightfox.setup(
     styles = {
       comments = "italic",
       functions = "bold",
-      keywords = "bold,italic",
+      keywords = "italic",
       strings = "NONE",
       variables = "NONE"
     },

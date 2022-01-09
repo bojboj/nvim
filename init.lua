@@ -47,8 +47,8 @@ plug("hrsh7th/cmp-path")
 
 -- nvim-dap
 plug("mfussenegger/nvim-dap")
+plug("Pocco81/DAPInstall.nvim")
 plug("rcarriga/nvim-dap-ui")
-plug("xdebug/vscode-php-debug", {dir = home .. "/.config/nvim/tooling/dap_adapters/vscode-php-debug", ["do"] = "npm install && npm run build"})
 
 vim.call("plug#end")
 

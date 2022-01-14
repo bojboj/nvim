@@ -11,7 +11,7 @@ nightfox.setup(
       variables = "NONE"
     },
     inverse = {
-      match_paren = true,
+      match_paren = false,
       visual = false,
       search = false
     },

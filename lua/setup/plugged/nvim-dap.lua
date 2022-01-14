@@ -1,10 +1,21 @@
 local dap_install = require("dap-install")
+local dap_installation_path = os.getenv("HOME") .. "/.config/nvim/tooling/dap_adapters/"
 
 dap_install.setup({
-  installation_path = os.getenv("HOME") .. "/.config/nvim/tooling/dap_adapters/",
+  installation_path = dap_installation_path
 })
 
-dap_install.config("php", {})
+dap_install.config(
+  "php",
+  {
+    adapters = {
+      type = "executable",
+      command = "node",
+      args = {dap_installation_path .. "php/vscode-php-debug/out/phpDebug.js"}
+    },
+    configurations = {}
+  }
+)
 
 require("dap.ext.vscode").load_launchjs()
 require("dapui").setup {

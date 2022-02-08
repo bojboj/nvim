@@ -9,6 +9,7 @@ vim.opt.cursorline = true     -- Show cursor line.
 vim.opt.cursorcolumn = true   -- Show cursor column line.
 vim.opt.swapfile = false      -- Disable swapfile.
 vim.opt.autoread = true       -- Update file that was modified outside.
+vim.opt.clipboard = "unnamed" -- Set defaults registry to clipboard.
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}

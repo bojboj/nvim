@@ -27,9 +27,6 @@ plug("lewis6991/gitsigns.nvim")
 -- editorconfig
 plug("editorconfig/editorconfig-vim")
 
--- notes
-plug("vimwiki/vimwiki")
-
 -- telescope
 plug("nvim-lua/plenary.nvim")
 plug("nvim-telescope/telescope.nvim")

@@ -7,7 +7,7 @@ vim.g.nvim_tree_indent_markers = 1
 
 nvim_tree.setup {
   filters = {
-    custom = {".git"}
+    custom = {".git", "__pycache__"}
   },
   view = {
     width = 40,

@@ -80,7 +80,6 @@ lsp_installer.settings({
 
 local servers = {
   "bashls",      -- bash
-  "clangd",      -- c
   "omnisharp",   -- c#
   "cssls",       -- css
   "html",        -- html
@@ -88,6 +87,7 @@ local servers = {
   "jsonls",      -- json
   "sumneko_lua", -- lua
   "phpactor",    -- php
+  "pyright",     -- python
   "yamlls"       -- yaml
 }
 

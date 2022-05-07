@@ -1,6 +1,7 @@
 vim.g.symbols_outline = {
   highlight_hovered_item = false,
-  auto_preview = false
+  auto_preview = false,
+  show_relative_numbers = true
 }
 
 local keymap = vim.api.nvim_set_keymap

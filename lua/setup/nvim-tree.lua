@@ -4,7 +4,7 @@ vim.g.nvim_tree_root_folder_modifier = ":p:."
 
 nvim_tree.setup({
   filters = {
-    custom = {".git", "__pycache__"}
+    custom = {"\\.git", "__pycache__"}
   },
   view = {
     relativenumber = true

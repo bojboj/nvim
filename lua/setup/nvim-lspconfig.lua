@@ -46,6 +46,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 local on_attach = function(client, bufnr)
+  require("aerial").on_attach(client, bufnr)
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -86,7 +88,7 @@ local servers = {
   "tsserver",    -- javascript
   "jsonls",      -- json
   "sumneko_lua", -- lua
-  --"phpactor",     -- php
+  --"phpactor",    -- php
   --"intelephense", -- php
   "pyright",     -- python
   "yamlls"       -- yaml

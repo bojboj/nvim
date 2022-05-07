@@ -1,8 +1,7 @@
-require("lualine").setup {
+require("lualine").setup({
   options = {
-    theme = "nightfox",
     component_separators = {left = "", right = ""},
-    section_separators = {left = "", right = ""},
+    section_separators = {left = "", right = ""}
   },
   sections = {
     lualine_c = {
@@ -13,4 +12,4 @@ require("lualine").setup {
       }
     }
   }
-}
+})

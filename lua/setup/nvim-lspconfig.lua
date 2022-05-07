@@ -86,7 +86,8 @@ local servers = {
   "tsserver",    -- javascript
   "jsonls",      -- json
   "sumneko_lua", -- lua
-  "phpactor",    -- php
+  --"phpactor",     -- php
+  --"intelephense", -- php
   "pyright",     -- python
   "yamlls"       -- yaml
 }

@@ -1,23 +1,11 @@
-local nightfox = require("nightfox")
-
-nightfox.setup(
-  {
-    fox = "nordfox",
+require("nightfox").setup({
+  options = {
     styles = {
       comments = "italic",
       functions = "bold",
       keywords = "italic",
-      strings = "NONE",
-      variables = "NONE"
-    },
-    inverse = {
-      match_paren = false,
-      visual = false,
-      search = false
-    },
-    colors = {},
-    hlgroups = {},
+    }
   }
-)
+})
 
-nightfox.load()
+vim.cmd("colorscheme nordfox")

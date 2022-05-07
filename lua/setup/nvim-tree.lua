@@ -6,9 +6,6 @@ nvim_tree.setup({
   filters = {
     custom = {"\\.git", "__pycache__"}
   },
-  view = {
-    relativenumber = true
-  },
   renderer = {
     indent_markers = {
       enable = true

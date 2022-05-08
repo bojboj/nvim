@@ -46,23 +46,12 @@ local servers = {
 
 require("nvim-lsp-installer").setup({
   install_root_dir = os.getenv("HOME") .. "/.config/nvim/tooling/lsp_servers",
-  ensure_installed = servers 
+  ensure_installed = servers
 })
 
-local lspconfig = require("lspconfig")
-
 for _, lsp in pairs(servers) do
-  if lsp == "pyright" then
-    lspconfig[lsp].setup({ 
-      capabilities = capabilities,
-      on_attach = on_attach,
-      cmd = require("lspcontainers").command(lsp),
-      root_dir = lspconfig.util.root_pattern(".git", vim.fn.getcwd())
-    })
-  else
-    lspconfig[lsp].setup({
+    require("lspconfig")[lsp].setup({
       capabilities = capabilities,
       on_attach = on_attach
     })
-  end
 end

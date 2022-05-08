@@ -19,30 +19,31 @@ plug("EdenEast/nightfox.nvim")
 -- ui
 plug("kyazdani42/nvim-web-devicons")
 plug("kyazdani42/nvim-tree.lua")
-plug("stevearc/aerial.nvim")
-plug("kevinhwang91/nvim-bqf")
 plug("lukas-reineke/indent-blankline.nvim")
 plug("nvim-lualine/lualine.nvim")
+plug("kevinhwang91/nvim-bqf")
 plug("lewis6991/gitsigns.nvim")
 
 -- editorconfig
 plug("editorconfig/editorconfig-vim")
 
--- telescope
+-- fuzzyfinder
 plug("nvim-lua/plenary.nvim")
 plug("nvim-telescope/telescope.nvim")
 
 -- treesitter
 plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 
--- lsp
-plug("neovim/nvim-lspconfig")
-plug("williamboman/nvim-lsp-installer")
-plug("lspcontainers/lspcontainers.nvim")
+-- completetion
 plug("hrsh7th/nvim-cmp")
 plug("hrsh7th/cmp-nvim-lsp")
 plug("hrsh7th/cmp-buffer")
 plug("hrsh7th/cmp-path")
+
+-- lsp
+plug("neovim/nvim-lspconfig")
+plug("williamboman/nvim-lsp-installer")
+plug("stevearc/aerial.nvim")
 
 -- nvim-dap
 plug("mfussenegger/nvim-dap")

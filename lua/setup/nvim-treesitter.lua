@@ -1,14 +1,13 @@
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "bash",
-    "c",
-    "c_sharp",
     "css",
     "html",
     "javascript",
     "json",
     "lua",
     "php",
+    "python",
     "yaml"
   },
   sync_install = false,
@@ -16,4 +15,4 @@ require("nvim-treesitter.configs").setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   }
-}
+})

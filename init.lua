@@ -38,6 +38,7 @@ plug("nvim-treesitter/nvim-treesitter", {["do"] = ":TSUpdate"})
 -- lsp
 plug("neovim/nvim-lspconfig")
 plug("williamboman/nvim-lsp-installer")
+plug("lspcontainers/lspcontainers.nvim")
 plug("hrsh7th/nvim-cmp")
 plug("hrsh7th/cmp-nvim-lsp")
 plug("hrsh7th/cmp-buffer")

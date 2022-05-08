@@ -2,36 +2,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   virtual_text = false,
 })
 
-local lsp_installer = require("nvim-lsp-installer")
-
-lsp_installer.settings({
-  install_root_dir = os.getenv("HOME") .. "/.config/nvim/tooling/lsp_servers",
-})
-
-local servers = {
-  "bashls",      -- bash
-  "omnisharp",   -- c#
-  "cssls",       -- css
-  "html",        -- html
-  "tsserver",    -- javascript
-  "jsonls",      -- json
-  "sumneko_lua", -- lua
-  "phpactor",    -- php
-  --"intelephense", -- php
-  "pyright",     -- python
-  "yamlls"       -- yaml
-}
-
-for _, name in pairs(servers) do
-  local ok, server = lsp_installer.get_server(name)
-    if ok then
-      if not server:is_installed() then
-        print("Installing " .. name)
-        server:install()
-    end
-  end
-end
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
@@ -61,14 +31,38 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-lsp_installer.on_server_ready(function(server)
-    local opts = {
+local servers = {
+  "bashls",      -- bash
+  "cssls",       -- css
+  "html",        -- html
+  "tsserver",    -- javascript
+  "jsonls",      -- json
+  "sumneko_lua", -- lua
+  "phpactor",    -- php
+  --"intelephense", -- php
+  "pyright",     -- python
+  "yamlls"       -- yaml
+}
+
+require("nvim-lsp-installer").setup({
+  install_root_dir = os.getenv("HOME") .. "/.config/nvim/tooling/lsp_servers",
+  ensure_installed = servers 
+})
+
+local lspconfig = require("lspconfig")
+
+for _, lsp in pairs(servers) do
+  if lsp == "pyright" then
+    lspconfig[lsp].setup({ 
       capabilities = capabilities,
       on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      }
-    }
-
-    server:setup(opts)
-end)
+      cmd = require("lspcontainers").command(lsp),
+      root_dir = lspconfig.util.root_pattern(".git", vim.fn.getcwd())
+    })
+  else
+    lspconfig[lsp].setup({
+      capabilities = capabilities,
+      on_attach = on_attach
+    })
+  end
+end

@@ -21,8 +21,11 @@ plug("kyazdani42/nvim-web-devicons")
 plug("kyazdani42/nvim-tree.lua")
 plug("lukas-reineke/indent-blankline.nvim")
 plug("nvim-lualine/lualine.nvim")
+
+-- utility
 plug("kevinhwang91/nvim-bqf")
 plug("lewis6991/gitsigns.nvim")
+plug("Pocco81/AutoSave.nvim")
 
 -- editorconfig
 plug("editorconfig/editorconfig-vim")

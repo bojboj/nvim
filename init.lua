@@ -47,7 +47,6 @@ plug("stevearc/aerial.nvim")
 
 -- nvim-dap
 plug("mfussenegger/nvim-dap")
-plug("Pocco81/dap-buddy.nvim", {["branch"] = "dev"})
 plug("rcarriga/nvim-dap-ui")
 
 vim.call("plug#end")

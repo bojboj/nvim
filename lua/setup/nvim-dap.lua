@@ -1,24 +1,20 @@
-local dap_install = require("dap-install")
-local dap_installation_path = os.getenv("HOME") .. "/.config/nvim/tooling/dap_adapters/"
-
-dap_install.setup({
-  installation_path = dap_installation_path
-})
-
-dap_install.config(
-  "php",
-  {
-    adapters = {
-      type = "executable",
-      command = "node",
-      args = {dap_installation_path .. "php/vscode-php-debug/out/phpDebug.js"}
-    },
-    configurations = {}
-  }
-)
-
 require("dap.ext.vscode").load_launchjs()
 require("dapui").setup()
+
+local dap_installation_path = os.getenv("HOME") .. "/.config/nvim/tooling/dap_adapters/"
+local dap = require('dap')
+
+dap.adapters.python = {
+  type = "executable",
+  command = dap_installation_path .. "python/bin/python",
+  args = {'-m', 'debugpy.adapter'}
+}
+
+dap.adapters.php = {
+  type = "executable",
+  command = "node",
+  args = {dap_installation_path .. "php/vscode-php-debug/out/phpDebug.js"}
+}
 
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true}

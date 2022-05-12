@@ -5,8 +5,8 @@ local dap = require('dap')
 
 dap.adapters.python = {
   type = "executable",
-  command = dap_installation_path .. "python/bin/python",
-  args = {'-m', 'debugpy.adapter'}
+  command = dap_installation_path .. "python/debugpy/bin/python",
+  args = {"-m", "debugpy.adapter"}
 }
 
 dap.adapters.php = {

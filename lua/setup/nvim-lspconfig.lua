@@ -50,8 +50,8 @@ require("nvim-lsp-installer").setup({
 })
 
 for _, lsp in pairs(servers) do
-    require("lspconfig")[lsp].setup({
-      capabilities = capabilities,
-      on_attach = on_attach
-    })
+  require("lspconfig")[lsp].setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+  })
 end

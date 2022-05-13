@@ -54,6 +54,7 @@ plug("mfussenegger/nvim-dap")
 vim.call("plug#end")
 
 require("setup.aerial")
+require("setup.autosave")
 require("setup.colorscheme")
 require("setup.gitsigns")
 require("setup.indent-blankline")

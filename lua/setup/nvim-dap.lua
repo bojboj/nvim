@@ -4,9 +4,9 @@ local dap_installation_path = os.getenv("HOME") .. "/.config/nvim/tooling/dap_ad
 local dap = require('dap')
 
 dap.adapters.python = {
-  type = "executable",
-  command = dap_installation_path .. "python/debugpy/bin/python",
-  args = {"-m", "debugpy.adapter"}
+  type = "server";
+  host = "127.0.0.1";
+  port = 5678
 }
 
 dap.adapters.php = {
@@ -19,6 +19,5 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true}
 
 keymap("n", "<leader>1", ":lua require('dap').repl.toggle()<cr>", {noremap = true, silent = true})
-keymap("n", "<leader>2", ":lua require('dap').terminate()<cr>", opts)
-keymap("n", "<leader>3", ":lua require('dap').continue()<cr>", opts)
-keymap("n", "<leader>4", ":lua require('dap').toggle_breakpoint()<cr>", opts)
+keymap("n", "<leader>2", ":lua require('dap').continue()<cr>", opts)
+keymap("n", "<leader>3", ":lua require('dap').toggle_breakpoint()<cr>", opts)

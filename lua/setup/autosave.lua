@@ -1,1 +1,4 @@
-require("autosave").setup({on_off_commands = true})
+require("autosave").setup({
+  enabled = false,
+  on_off_commands = true
+})
